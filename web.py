@@ -34,7 +34,7 @@ def group_col(col, target):
 
 
 def main():
-    st.title('Salary Calculator for AI Jobs')
+    st.title('AI Salary Predictor for Data Science Jobs')
 
     with open('model.pkl', 'rb') as f:
         model = pickle.load(f)
