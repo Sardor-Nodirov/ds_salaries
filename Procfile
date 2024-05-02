@@ -1,0 +1,1 @@
+worker: streamlit run web.py
