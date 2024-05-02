@@ -2,6 +2,8 @@
 Sardor Nodirov
 05/02/2024
 PH398 Final Project
+
+Developed by Sardor Nodirov for PH398 Final Project. Data source: Kaggle. Data Science Job Salaries by Ruchi Bhatia (2022). https://www.kaggle.com/datasets/ruchi798/data-science-job-salaries/data
 """
 
 import pandas as pd
@@ -32,7 +34,7 @@ def group_col(col, target):
 
 
 def main():
-    st.title('AI Jobs Salary Calculator')
+    st.title('Salary Calculator for AI Jobs')
 
     with open('model.pkl', 'rb') as f:
         model = pickle.load(f)
@@ -72,37 +74,6 @@ def main():
         
         st.subheader('Predicted Salary (USD)')
         st.title(f'${prediction[0]:.2f}')
-
-    footer="""<style>
-    a:link , a:visited{
-    color: blue;
-    background-color: transparent;
-    text-decoration: underline;
-    }
-
-    a:hover,  a:active {
-    color: red;
-    background-color: transparent;
-    text-decoration: underline;
-    }
-
-    .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: white;
-    color: black;
-    text-align: center;
-    }
-    </style>
-    <div class="footer">
-    <p>Developed by Sardor Nodirov for PH398 Final Project</a></p>
-    </div>
-    """
-    
-    st.markdown(footer,unsafe_allow_html=True)
-
 
 if __name__ == '__main__':
     main()
